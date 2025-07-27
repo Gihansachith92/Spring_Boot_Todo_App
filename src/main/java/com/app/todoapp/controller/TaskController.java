@@ -40,4 +40,10 @@ public class TaskController {
         return "redirect:/";
     }
 
+    @GetMapping("/{id}/toggle")
+    public String toggleTasks(@PathVariable Long id){
+        taskService.toggleTask(id);
+        return "redirect:/";
+    }
+
 }
